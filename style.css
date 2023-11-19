@@ -1,0 +1,386 @@
+/* Reset CSS */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.container {
+    margin-top: 20px;
+    /* Ensure content starts below the fixed aside */
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+main {
+    grid-area: main;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.current {
+    color: #ffd700;
+    /* warna kuning */
+}
+
+section.courses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+}
+
+/* Updated Popular Recipes Section to List */
+section.popular-recipes {
+    background-color: #eee;
+    padding: 15px;
+    text-align: center;
+    border: #333 1px;
+    border-radius: 10px;
+
+}
+
+section.popular-recipes ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.popular-recipes li {
+    margin-bottom: 10px;
+}
+
+section.popular-recipes a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section.popular-recipes a:hover {
+    color: #ff6347;
+}
+
+section.contact-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    width: 300px;
+    height: 250px;
+    float: left;
+    margin-right: 20px;
+    border: 2px solid #7a7575;
+
+
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section.contact-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+section.contact-form h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+section.contact-form form {
+    display: grid;
+    gap: 20px;
+}
+
+section.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+section.contact-form input,
+section.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+section.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+section.contact-form button:hover {
+    background-color: #ff6347;
+}
+
+section.about-section p {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+}
+
+section.about-section {
+    margin-bottom: 70px;
+
+}
+
+section.about-section h2 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    aside {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+}
+
+table,
+td,
+th {
+    border: 1px solid;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+
+}
+
+.slideshow-container {
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+.menu-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
